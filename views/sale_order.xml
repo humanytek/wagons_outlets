@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="sale_order_wagons_outlets">
+            <field name="name">sale.order.wagons.outlets</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <button name="action_view_delivery" position="before">
+                    <button type="object" class="oe_highlight"
+                        name="wagons_outlets" string="Wagons outlets"
+                        attrs="{'invisible': [('state','!=', 'progress')]}"/>
+                </button>
+                <notebook position="inside">
+                    <page string="Wagons outlets">
+                        <field name="wagons_outlets_ids"/>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</openerp>

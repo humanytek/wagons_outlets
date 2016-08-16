@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_wagons_outlets_group_user,wagons.outlets.user,model_wagons_outlets,base.group_user,1,1,1,1
+access_wagons_outlets,access_wagons_outlets,model_wagons_outlets,,1,0,0,0

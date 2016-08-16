@@ -1,6 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-        <!--- TODO [IMP] -->
+        <record id="seq_type_wagons_outlets" model="ir.sequence.type">
+          <field name="name">REG Type3</field>
+          <field name="code">reg_code3</field>
+        </record>
+        <record id="seq_wagons_outlets" model="ir.sequence">
+            <field name="name">reg</field>
+            <field name="code">reg_code3</field>
+            <field name="prefix">WO</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record model="ir.ui.view" id="wagons_outlets_form_view">
+            <field name="name">wagons.outlets.form</field>
+            <field name="model">wagons.outlets</field>
+            <field name="arch" type="xml">
+                <form string="Wagons Outlets Form">
+                    <header>
+                        <button name="fun_load" type="object" string="Load" states="load" class="oe_highlight"/>
+                        <field name="state" widget="statusbar" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label string="Wagon Outlets "/>
+                                <field name="name" class="oe_inline" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group col="1">
+                                <group col="3">
+                                    <field name="contract_id" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}"/>
+                                    <field name="contract_type" nolabel="1" class="oe_inline"/>
+                                </group>
+                                <group>
+                                    <field name="partner_id"/>
+                                    <field name="street"/>
+                                </group>
+                            </group>
+                            <group col="1">
+                                <group>
+                                    <field name="wagon" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}"/>
+                                </group>
+                                <group col="3">
+                                    <field name="zvp_id" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}"/>
+                                    <field name="zvp_partner" nolabel="1" class="oe_inline"/>
+                                </group>
+                                <group>
+                                    <group col="4">
+                                        <field name="seal_down_from" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}"/>
+                                        <field name="seal_down_to" string="to" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}" class="oe_inline"/>
+                                    </group>
+                                </group>
+                            </group>
+                        </group>
+                        <group col="3">
+                            <group col="1">
+                                <label for="hired" string="Hired"/>
+                                <field name="hired" class="oe_inline" nolabel="1"/>
+                            </group>
+                            <group col="1">
+                                <label for="delivered" string="Delivered"/>
+                                <field name="delivered" class="oe_inline" nolabel="1"/>
+                            </group>
+                            <group col="1">
+                                <label for="pending" string="Pending"/>
+                                <field name="pending" class="oe_inline" nolabel="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="product_id"/>
+                            <field name="warehouse_id"/>
+                        </group>
+                        <group col="3">
+                            <group>
+                                <field name="humidity" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                <field name="density" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                <field name="temperature" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                            </group>
+                            <group>
+                                <field name="damaged" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                <field name="broken" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                <field name="impurities" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                            </group>
+                            <group col="1">
+                                <group>
+                                    <field name="transgenic" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                </group>
+                                <group>
+                                    <field name="seal_up_from" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                    <field name="seal_up_to" string="to" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                </group>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="ticket" attrs="{'readonly':[('state', 'not in', ['load'])], 'required':[('state', 'in', ['load'])]}"/>
+                        </group>
+                        <group>
+                            <group col="1">
+                                <group col="5">
+                                    <group col="1">
+                                        <button type="object" string="Update" states="load" class="oe_highlight"/>
+                                        <label string="Weight 1"/>
+                                        <field name="weight_1" attrs="{'readonly':[('state', 'not in', ['load'])], 'required':[('state', 'in', ['load'])]}" nolabel="1"/>
+                                    </group>
+                                    <group col="1">
+                                        <button type="object" string="Update" states="load" class="oe_highlight"/>
+                                        <label string="Weight 2"/>
+                                        <field name="weight_2" attrs="{'readonly':[('state', 'not in', ['load'])], 'required':[('state', 'in', ['load'])]}" nolabel="1"/>
+                                    </group>
+                                    <group col="1">
+                                        <button type="object" string="Update" states="load" class="oe_highlight"/>
+                                        <label string="Weight 3"/>
+                                        <field name="weight_3" attrs="{'readonly':[('state', 'not in', ['load'])], 'required':[('state', 'in', ['load'])]}" nolabel="1"/>
+                                    </group>
+                                    <group col="1">
+                                        <button type="object" string="Update" states="load" class="oe_highlight"/>
+                                        <label string="Weight 4"/>
+                                        <field name="weight_4" attrs="{'readonly':[('state', 'not in', ['load'])], 'required':[('state', 'in', ['load'])]}" nolabel="1"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <field name="weight_neto"/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="kilos_damaged"/>
+                                <field name="kilos_broken"/>
+                                <field name="kilos_impurities"/>
+                                <field name="kilos_humidity"/>
+                                <field name="weight_neto_analized"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="stock_picking" attrs="{'invisible': [('state', 'not in', 'done')]}"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wagons_outlets_tree_view">
+            <field name="name">wagons.outlets.tree</field>
+            <field name="model">wagons.outlets</field>
+            <field name="arch" type="xml">
+                <tree string="Wagons Outlets Tree">
+                    <field name="name"/>
+                    <field name="contract_id"/>
+                    <field name="product_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wagons_outlets_form_view_permissions">
+            <field name="name">wagons.outlets.form</field>
+            <field name="model">wagons.outlets</field>
+            <field name="inherit_id" ref="wagons_outlets_form_view"/>
+            <field name="groups_id" eval="[(6,0, [ref('group_wagons_outlets')])]" />
+            <field name="arch" type="xml">
+                <field name="state" position="attributes">
+                    <attribute name="clickable">1</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wagons_outlets_search_view">
+            <field name="name">wagons.outlets.search</field>
+            <field name="model">wagons.outlets</field>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="capture" string="Capture" domain="[('state', '=', 'capture')]"/>
+                    <filter name="load" string="Load" domain="[('state', '=', 'load')]"/>
+                    <filter name="analysis" string="Analysis" domain="[('state', '=', 'analysis')]"/>
+                    <filter name="done" string="Done" domain="[('state', '=', 'done')]"/>
+                    <separator/>
+                    <group string="Group By">
+                        <filter name="group_by_state" string="State"
+                                context="{'group_by': 'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="wagons_outlets_list_action">
+            <field name="name">Wagons Outlets</field>
+            <field name="res_model">wagons.outlets</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first wagon outlets
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_outlets"
+            parent="stock.menu_stock_root"
+            name="Outlets"
+            sequence="2"/>
+
+        <menuitem
+            id="menu_action_wagons_outlets_form"
+            parent="menu_outlets"
+            action="wagons_outlets_list_action"/>
     </data>
 </openerp>
