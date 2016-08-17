@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_wagons_outlets,access_wagons_outlets,model_wagons_outlets,,1,0,0,0
+access_zvp,access_zvp,model_zvp,,1,0,0,0
