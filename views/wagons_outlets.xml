@@ -89,8 +89,8 @@
                                     <field name="transgenic" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
                                 </group>
                                 <group>
-                                    <field name="seal_up_from" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
-                                    <field name="seal_up_to" string="to" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                    <field name="seal_up_from" attrs="{'readonly':[('state', 'not in', ['analysis'])], 'required':[('state', 'in', ['analysis'])]}"/>
+                                    <field name="seal_up_to" string="to" attrs="{'readonly':[('state', 'not in', ['analysis'])], 'required':[('state', 'in', ['analysis'])]}"/>
                                 </group>
                             </group>
                         </group>
