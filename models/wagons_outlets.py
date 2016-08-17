@@ -100,21 +100,6 @@ class WagonsOutlets(models.Model):
         else:
             self.kilos_humidity = 0
 
-    @api.constrains('humidity')
-    def _constrains_humidity(self):
-        if self.humidity >= 17:
-            raise exceptions.ValidationError(_('Can not accept that product, humidity over 17'))
-
-    @api.onchange('humidity')
-    def _onchange_humidity(self):
-        if self.humidity >= 16 and self.humidity < 17:
-            return {
-                'warning': {
-                    'title': _('Humidity high'),
-                    'message': _('Can not storage that product, humidity over 16')
-                }
-            }
-
     @api.one
     @api.depends('weight_neto', 'kilos_damaged', 'kilos_broken', 'kilos_impurities', 'kilos_humidity')
     def _compute_weight_neto_analized(self):

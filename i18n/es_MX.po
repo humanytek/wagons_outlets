@@ -1,0 +1,297 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* wagons_outlets
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-17 20:19+0000\n"
+"PO-Revision-Date: 2016-08-17 20:19+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: wagons_outlets
+#: model:ir.actions.act_window,help:wagons_outlets.wagons_outlets_list_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first wagon outlets\n"
+"                </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Crea la primer saldia de vagon\n"
+"                </p>\n"
+"            "
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_search_view
+#: selection:wagons.outlets,state:0
+msgid "Analysis"
+msgstr "Analisis"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,broken:0
+msgid "Broken"
+msgstr "Quebrado"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_search_view
+#: selection:wagons.outlets,state:0
+msgid "Capture"
+msgstr "Captura"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,contract_id:0
+msgid "Contract id"
+msgstr "Contrato"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,contract_type:0
+msgid "Contract type"
+msgstr "Tipo de contrato"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,partner_id:0
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,damaged:0
+msgid "Damaged"
+msgstr "Dañado"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+#: field:wagons.outlets,delivered:0
+msgid "Delivered"
+msgstr "Entregado"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,density:0
+msgid "Density"
+msgstr "Densidad"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_search_view
+#: selection:wagons.outlets,state:0
+msgid "Done"
+msgstr "Hecho"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+#: field:wagons.outlets,hired:0
+msgid "Hired"
+msgstr "Contratado"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,humidity:0
+msgid "Humidity"
+msgstr "Humedad"
+
+#. module: wagons_outlets
+#: code:addons/wagons_outlets/models/wagons_outlets.py:113
+#, python-format
+msgid "Humidity high"
+msgstr "Humedad alta"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,id:0
+#: field:zvp,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,impurities:0
+msgid "Impurities"
+msgstr "Impurezas"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,kilos_broken:0
+msgid "Kilos broken"
+msgstr "Kilos quebrados"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,kilos_damaged:0
+msgid "Kilos damaged"
+msgstr "Kilos dañados"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,kilos_humidity:0
+msgid "Kilos humidity"
+msgstr "Kilos humedos"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,kilos_impurities:0
+msgid "Kilos impurities"
+msgstr "Kilos impuros"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_search_view
+#: selection:wagons.outlets,state:0
+msgid "Load"
+msgstr "Carga"
+
+#. module: wagons_outlets
+#: model:ir.ui.menu,name:wagons_outlets.menu_outlets
+msgid "Outlets"
+msgstr "Salidas"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,zvp_partner:0
+#: field:zvp,partner:0
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+#: field:wagons.outlets,pending:0
+msgid "Pending"
+msgstr "Pendiente"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,product_id:0
+msgid "Product id"
+msgstr "Producto"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,seal_down_from:0
+msgid "Seal down from"
+msgstr "Sello inferior desde"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,seal_down_to:0
+msgid "Seal down to"
+msgstr "Sello inferior hasta"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,seal_up_from:0
+msgid "Seal up from"
+msgstr "Sello superior desde"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,seal_up_to:0
+msgid "Seal up to"
+msgstr "Sello superior hasta"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_search_view
+#: field:wagons.outlets,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,stock_picking:0
+msgid "Stock picking"
+msgstr "Recepcion"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,street:0
+msgid "Street"
+msgstr "Domicilio"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,temperature:0
+msgid "Temperature"
+msgstr "Temperatura"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,ticket:0
+msgid "Ticket"
+msgstr "Ticket"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,transgenic:0
+msgid "Transgenic"
+msgstr "Transgenico"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+msgid "Update"
+msgstr "Actualizar"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,wagon:0
+msgid "Wagon"
+msgstr "Vagon"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+msgid "Wagon Outlets"
+msgstr "Salidas de vagon"
+
+#. module: wagons_outlets
+#: model:ir.actions.act_window,name:wagons_outlets.wagons_outlets_list_action
+#: model:ir.ui.menu,name:wagons_outlets.menu_action_wagons_outlets_form
+msgid "Wagons Outlets"
+msgstr "Salidas de vagon"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+msgid "Wagons Outlets Form"
+msgstr "Formulario de salidas de vagon"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_tree_view
+msgid "Wagons Outlets Tree"
+msgstr "Lista de salidas de vagon"
+
+#. module: wagons_outlets
+#: view:sale.order:wagons_outlets.sale_order_wagons_outlets
+msgid "Wagons outlets"
+msgstr "Salidas de vagon"
+
+#. module: wagons_outlets
+#: field:sale.order,wagons_outlets_ids:0
+msgid "Wagons outlets ids"
+msgstr "Salidas de vagon"
+
+#. module: wagons_outlets
+#: model:res.groups,name:wagons_outlets.group_wagons_outlets
+msgid "Wagons/Outlets"
+msgstr "Vagones/Salida"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+#: field:wagons.outlets,weight_1:0
+msgid "Weight 1"
+msgstr "Peso 1"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+#: field:wagons.outlets,weight_2:0
+msgid "Weight 2"
+msgstr "Peso 2"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+#: field:wagons.outlets,weight_3:0
+msgid "Weight 3"
+msgstr "Peso 3"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+#: field:wagons.outlets,weight_4:0
+msgid "Weight 4"
+msgstr "Peso 4"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,weight_neto:0
+msgid "Weight neto"
+msgstr "Peso neto"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,weight_neto_analized:0
+msgid "Weight neto analized"
+msgstr "Peso neto analizado"
+
+#. module: wagons_outlets
+#: field:wagons.outlets,zvp_id:0
+msgid "Zvp id"
+msgstr "ZVP"
+
+#. module: wagons_outlets
+#: view:wagons.outlets:wagons_outlets.wagons_outlets_form_view
+msgid "to"
+msgstr "hasta"
