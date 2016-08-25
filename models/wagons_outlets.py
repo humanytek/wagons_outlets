@@ -72,7 +72,7 @@ class WagonsOutlets(models.Model):
     @api.depends('weight_neto', 'damaged')
     def _compute_kilos_damaged(self):
         if self.damaged > 5:
-            self.kilos_damaged = ((self.damaged - 5) / 1000) * self.weight_neto
+            self.kilos_damaged = ((self.damaged - 5) / 100) * self.weight_neto
         else:
             self.kilos_damaged = 0
 
@@ -80,7 +80,7 @@ class WagonsOutlets(models.Model):
     @api.depends('weight_neto', 'broken')
     def _compute_kilos_broken(self):
         if self.broken > 2:
-            self.kilos_broken = ((self.broken - 2) / 1000) * self.weight_neto
+            self.kilos_broken = ((self.broken - 2) / 100) * self.weight_neto
         else:
             self.kilos_broken = 0
 
@@ -88,7 +88,7 @@ class WagonsOutlets(models.Model):
     @api.depends('weight_neto', 'impurities')
     def _compute_kilos_impurities(self):
         if self.impurities > 2:
-            self.kilos_impurities = ((self.impurities - 2) / 1000) * self.weight_neto
+            self.kilos_impurities = ((self.impurities - 2) / 100) * self.weight_neto
         else:
             self.kilos_impurities = 0
 
