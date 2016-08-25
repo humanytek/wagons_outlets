@@ -143,14 +143,18 @@ class WagonsOutlets(models.Model):
     @api.multi
     def write(self, vals, recursive=None):
         if not recursive:
-            if self.state == 'analysis':
-                self.write({'state': 'weight_input'}, 'r')
-            elif self.state == 'weight_input':
-                self.write({'state': 'unloading'}, 'r')
-            elif self.state == 'unloading':
-                self.write({'state': 'weight_output'}, 'r')
-            elif self.state == 'weight_output':
+            if self.state == 'capture':
+                self.write({'state': 'load'}, 'r')
+            elif self.state == 'load':
+                self.write({'state': 'analysis'}, 'r')
+            elif self.state == 'analysis':
                 self.write({'state': 'done'}, 'r')
 
-        res = super(TrucksReception, self).write(vals)
+        res = super(WagonsOutlets, self).write(vals)
+        return res
+
+    @api.model
+    def create(self, vals):
+        vals['state'] = 'weight_input'
+        res = super(WagonsOutlets, self).create(vals)
         return res
