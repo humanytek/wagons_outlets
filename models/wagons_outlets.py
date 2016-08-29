@@ -155,6 +155,6 @@ class WagonsOutlets(models.Model):
 
     @api.model
     def create(self, vals):
-        vals['state'] = 'weight_input'
+        vals['state'] = 'load'
         res = super(WagonsOutlets, self).create(vals)
         return res
